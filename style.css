@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root{
+    --color: #d33bfd; /* création de la variable couleur réutilisable */
+}
+
+/* **************** Paramètres généraux ********************** */
+body{
+    margin: 0%;
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+    background: black;
+}
+
+/* *********************** Partie Header et Barre de navigation********************** */
+
+header {
+    /* On effectue un dégradé de couleurs pour la tête de pâge */
+    background:linear-gradient(#13181d, #20212e, #341b57);
+}
+
+header nav {
+    /* On aligne les éléments de la barre de navigation */
+    /* Utilisation des flexs boxs: navigation est un conteneur de 2 items*/
+    padding: 30px 5% 0 5%; /* marge intérieur ( haut, gauche, bas, droite)*/
+    display: flex; /* Par defaut il aligne les élements */
+    flex-direction: row; /* valeur par defaut pour aligner sinon column pour empiler */
+    flex-wrap: wrap; /* Passage à la ligne si plus de place */
+    justify-content: space-between; /* espace entre les 2 items gestion de l'espace) */
+    align-items: center;/* alignement des élements */
+}
+
+header nav h1 { /* on stylise le premier élement */
+    margin: 0; /* on efface les marges autour de l'élément */
+    text-transform: uppercase; /* passage du texte en majuscule */
+    color: var(--color); /* création d'une variable où l'on va stocker la valeur pour modifier le thème plus facilement couleur */
+}
+
+header nav .right { /* on stylise le deuxième élement */
+    display: flex; /*utilisation des flexbox pour aligner les élements */
+    align-items: center; /* center les items dans l'élement (div right) */
+}
+
+header nav .right p { /* les paragraphes de la div right */
+    margin: 0 15px 0 0;
+    color: #ccc;
+}
+
+header nav .right p:hover { /* lorsque l'utilisateur passe au dessus de l'élément */
+    color: white;
+    cursor: pointer;
+}
+
+header nav .right button { /* on applique des propriétés au bouton */
+    padding: 5px 15px; /* on applique des marges intérieurs pour aérer le bouton (haut/bas, droite/gauche) */
+    font-size: 16px; /* modification de la taille du texte */
+    background-color: inherit; /* couleur du bouton (inherant prend la couleur du background parent)*/
+    border: 1px solid var(--color); /* on définit la bordure du boutton */
+    color: var(--color); /* on applique la couleur de la variable à thème pour le bouton*/ 
+    border-radius: 5px; /* on arrondis les bords du bouton*/
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s; /* mise en place d'une petite transition */
+}
+
+header nav .right button:hover{
+    color: inherit; /* effet lorsque l'utilisateur place le curseur sur acehter */
+    background-color: var(--color);
+}
+
+/* *******************************Paramètres des images ********************************* */
+
+/* *************************Paramètre images description  ***************************** */
+.images {
+    width: 90px;
+    height: 120px;
+    border: 2px solid #999;
+    border: 1px solid #999;
+    border-radius: 2%;
+}
+
+.images:hover {
+    transform: ;
+    cursor: pointer;
+}
+
+
+/* **********************Paramètres image principale ********************************** */
+
+.image{
+    height: 500px;
+    width: 350px;
+    border: 1px solid #999;
+    border-radius: 2%;
+}
+
+/* **************************Organisation de la disposition ************************** */
+
+@media screen and (max-width: 640px) { /* celà permet de coder un style pour les ecrans de moins de 640px */
+    header nav.right p{
+        display: none; /* on masque les paragraphes */
+    }
+}
