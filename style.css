@@ -33,7 +33,7 @@ header nav {
 
 header nav h1 { /* on stylise le premier élement */
     margin: 0; /* on efface les marges autour de l'élément */
-    text-transform: uppercase; /* passage du texte en majuscule */
+    text-transform: uppercase; /* passage du texte en majuscule */  
     color: var(--color); /* création d'une variable où l'on va stocker la valeur pour modifier le thème plus facilement couleur */
 }
 
@@ -51,8 +51,9 @@ header nav .right p:hover { /* lorsque l'utilisateur passe au dessus de l'élém
     color: white;
     cursor: pointer;
 }
+/* *************************Début du bouton de navigation ****************************** */
 
-header nav .right button { /* on applique des propriétés au bouton */
+header nav .right button { /* on applique des propriétés au bouton dans la barre de navigation */
     padding: 5px 15px; /* on applique des marges intérieurs pour aérer le bouton (haut/bas, droite/gauche) */
     font-size: 16px; /* modification de la taille du texte */
     background-color: inherit; /* couleur du bouton (inherant prend la couleur du background parent)*/
@@ -68,18 +69,38 @@ header nav .right button:hover{
     background-color: var(--color);
 }
 
+/* *************************Fin du bouton de navigation ****************************** */
+
+/* ******************Début des paramètres button avec image ****************** */
+
+.presentation-first .product-presentation button{ /* on applique des propriétés au bouton avec les images */
+    
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px 50px; /* on applique des marges intérieurs pour aérer le bouton (haut/bas, droite/gauche) */
+    font-size: 24px; /* modification de la taille du texte */
+    background-color: inherit; /* couleur du bouton (inherant prend la couleur du background parent)*/
+    border: 1px solid var(--color); /* on définit la bordure du boutton */
+    color: var(--color); /* on applique la couleur de la variable à thème pour le bouton*/ 
+    border-radius: 5px; /* on arrondis les bords du bouton*/
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s; /* mise en place d'une petite transition */
+}
+/* ******************Fin des paramètres button avec image ****************** */
+
 /* *******************************Paramètres des images ********************************* */
+
 .small-images{
     display: flex;
     
 }
 /* *************************Paramètre images description  ***************************** */
 .images {
-    width: 75px;
-    height: 100px;
-    border: 2px solid #999;
+    height: 160px;
+    width: 133px;
     border: 1px solid #999;
-    border-radius: 2%;
+    border-radius: 5%;
 }
 
 .images:hover {
@@ -87,17 +108,40 @@ header nav .right button:hover{
     cursor: pointer;
 }
 
-
 /* **********************Paramètres image principale ********************************** */
 
 .image{
     height: 500px;
-    width: 350px;
+    width: 400px;
     border: 1px solid #999;
     border-radius: 2%;
 }
 
+.image:hover {
+    cursor: pointer;
+}
+
 /* **************************Organisation de la disposition ************************** */
+
+/* *************************Début du design du footer *********************************** */
+footer{
+    background-color: #1a1a1a;
+    padding: 10px 100px;
+    margin: 0;
+    color: #a08e8e;
+}
+footer .colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .colonnes .colonne p:hover{
+    transform:scale(1.10);
+    cursor: pointer;
+}
+/* *************************Fin du design du footer *********************************** */
+
 
 @media screen and (max-width: 640px) { /* celà permet de coder un style pour les ecrans de moins de 640px */
     header nav.right p{
